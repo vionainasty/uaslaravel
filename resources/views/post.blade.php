@@ -3,11 +3,9 @@
 
 @section('container')
 <article>
-    <h2>Judul</h2>
-    <h5>Author</h5>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque. 
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque. Lorem 
-    ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque.</p>
+    <h2>{{ $post['title'] }}</h2>
+    <h5>{{ $post['author'] }}</h5>
+    <p>{{ $post['body'] }}</p>
 </article>
 
 <a href="/blog">Back to Posts</a>
