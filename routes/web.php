@@ -18,8 +18,38 @@ Route::get('/about', function () {
     ]);
 });
 
+
+
 Route::get('/blog', function () {
+
+$blog_posts = [
+    [
+        "title" => "Judul Post Pertama",
+        "slug" => "judul-post-pertama",
+        "author" => "Ravi",
+        "body" => "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, cumque. Lorem ipsum 
+        dolor sit amet consectetur adipisicing elit. Doloribus, cumque. Lorem ipsum dolor sit amet consectetur 
+        adipisicing elit. Doloribus, cumque."
+    ],
+    [
+        "title" => "Judul Post Kedua",
+        "slug" => "judul-post-kedua",
+        "author" => "Rangga",
+        "body" => "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Inventore dicta porro tenetur 
+        quas eos labore quis nostrum suscipit ratione omnis?"
+    ],
+];
+
+
     return view('posts', [
-        "title" => "Posts"
+        "title" => "Posts",
+        "posts" => $blog_posts
     ]);
+});
+
+//halaman single post
+Route::get('posts/{slug}', function($slug) {
+return view('post', [
+"title" => "Single Post"
+]);
 });
