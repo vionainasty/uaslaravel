@@ -9,8 +9,8 @@
 </head>
 <body>
     <h1>Halaman About</h1>
-    <h3>Ravi Pratama</h3>
-    <p>ravi@gmail.com</p>
-    <img src="img/rc.png" alt="Ravi Pratama" width="200">
+    <h3> <?=$name;?></h3>
+    <p><?=$email;?></p>
+    <img src="img/<?=$image;?>" alt="<?=$name;?>" width="200">
 </body>
 </html>

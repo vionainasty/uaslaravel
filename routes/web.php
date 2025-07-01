@@ -7,7 +7,11 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about', [
+        "name" => "Ravi",
+        "email" => "ravi@gmail.com",
+        "image" => "rc.png"
+    ]);
 });
 
 Route::get('/blog', function () {
