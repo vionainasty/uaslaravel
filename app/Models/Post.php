@@ -30,12 +30,12 @@ public static function all()
 public static function find($slug)
 {
     $posts = self::$blog_posts;
-$post = [];
-foreach($posts as $p) {
-  if($p["slug"] === $slug) {
+    $post = [];
+    foreach($posts as $p) {
+    if($p["slug"] === $slug) {
     $post = $p;
-}
-}
+    }
+    }
 return $post;
-}
+    }
 }
